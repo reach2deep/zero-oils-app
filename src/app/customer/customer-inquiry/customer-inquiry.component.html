@@ -19,15 +19,15 @@
       
       <div>
         <mat-form-field style="width:300px">
-          <input [disabled]="readonlyMode" matInput name="AddressLine1" value="{{customerViewModel.AddressLine1}}" 
-          [(ngModel)]="customerViewModel.addressLine1" placeholder="Address Line 1">
+          <input [disabled]="readonlyMode" matInput name="addressLine1" value="{{customerViewModel.addressLine1}}" 
+          [(ngModel)]="customerViewModel.addressLine1" placeholder="address Line 1">
         </mat-form-field>
       </div>
 
       <div>
         <mat-form-field style="width:300px">
-          <input [disabled]="readonlyMode" matInput name="AddressLine2" value="{{customerViewModel.AddressLine2}}" 
-          [(ngModel)]="customerViewModel.addressLine2" placeholder="Address Line 2">
+          <input [disabled]="readonlyMode" matInput name="addressLine2" value="{{customerViewModel.addressLine2}}" 
+          [(ngModel)]="customerViewModel.addressLine2" placeholder="address Line 2">
         </mat-form-field>
       </div>
 
@@ -55,7 +55,7 @@
     </form>
   </mat-card-content>
   <mat-card-actions>
-    <button [disabled]="readonlyMode==false" mat-flat-button color="primary" (click)="editCustomer()">Edit Customer</button>&nbsp;
+    <button [disabled]="readonlyMode==false" mat-flat-button color="primary" >Edit Customer</button>&nbsp;
     <button [disabled]="readonlyMode==true" mat-flat-button color="primary" (click)="createOrUpdateCustomer()">Save Customer</button>&nbsp;
     <button [disabled]="createMode==true" mat-flat-button color="primary"  (click)="createNewCustomer()">Create New Customer</button>&nbsp;
     <!-- <button [disabled]="createMode==true || readonlyMode==false" mat-flat-button color="primary" (click)="createSalesOrder()">Create Sales Order</button> -->

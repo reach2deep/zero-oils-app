@@ -67,7 +67,7 @@
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="customerListViewModel.displayedColumns"></tr>
-    <tr style="cursor: pointer;" mat-row *matRowDef="let row; columns: customerListViewModel.displayedColumns; let i = index" (click)="selectCustomer(i)"></tr>
+    <tr style="cursor: pointer;" mat-row *matRowDef="let row; columns: customerListViewModel.displayedColumns; let i = index"></tr>
 
   </table>
 </mat-card-content>
