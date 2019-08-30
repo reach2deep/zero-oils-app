@@ -36,13 +36,18 @@ export class AppComponent {
     this.sessionService.moduleLoadedEvent.subscribe(event => this.moduleLoadedEvent(event));
 
     // const native = this.elementRef.nativeElement;
-    // const settings = native.getAttribute('settings');
+    // const settings = native.getAttribute('settings'); https://zero-oils-api.herokuapp.com
     const appSettings = new AppSettings();
 
-    appSettings.accountManagementWebApiUrl = 'https://localhost:44302/api/';
-    appSettings.inventoryManagementWebApiUrl = 'https://localhost:44302/api/';
-    appSettings.purchaseOrderManagementWebApiUrl = 'https://localhost:44302/api/';
-    appSettings.salesOrderManagementWebApiUrl = 'https://localhost:44302/api/';
+    // appSettings.accountManagementWebApiUrl = 'https://localhost:44302/api/';
+    // appSettings.inventoryManagementWebApiUrl = 'https://localhost:44302/api/';
+    // appSettings.purchaseOrderManagementWebApiUrl = 'https://localhost:44302/api/';
+    // appSettings.salesOrderManagementWebApiUrl = 'https://localhost:44302/api/';
+
+    appSettings.accountManagementWebApiUrl = 'https://zero-oils-api.herokuapp.com/api/';
+    appSettings.inventoryManagementWebApiUrl = 'https://zero-oils-api.herokuapp.com/api/';
+    appSettings.purchaseOrderManagementWebApiUrl = 'https://zero-oils-api.herokuapp.com/api/';
+    appSettings.salesOrderManagementWebApiUrl = 'https://zero-oils-api.herokuapp.com/api/';
 
     // appSettings = JSON.parse(settings);
 
