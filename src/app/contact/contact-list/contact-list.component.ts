@@ -86,10 +86,11 @@ ngAfterViewInit() {
   }
 
   private contactInquirySuccess(response: ContactListViewModelResponse) {
-    console.log(JSON.stringify(response));
+
     this.contactListViewModel.contacts = response.entity;
     this.contactListViewModel.totalContacts = response.totalRows;
     this.contactListViewModel.totalPages = response.totalPages;
+    console.log(JSON.stringify(this.contactListViewModel.contacts));
   }
 
   private contactInquiryFailed(error: HttpErrorResponse) {
