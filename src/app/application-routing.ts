@@ -10,8 +10,8 @@ export const ApplicationRoutes: Routes = [
             '../app/account-management/account-management.module#AccountManagementModule'
     },
     {
-        path: 'customermanagement', loadChildren:
-            '../app/customer/customer-management.module#CustomerManagementModule'
+        path: 'contactmanagement', loadChildren:
+            '../app/contact/contact-management.module#ContactManagementModule'
     },
 ];
 

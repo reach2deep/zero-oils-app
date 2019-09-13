@@ -1,0 +1,63 @@
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h2>New Contact</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <form>
+
+      <div>
+        <mat-form-field style="width:300px">
+          <input [disabled]="readonlyMode" matInput name="ContactName" value="{{contactViewModel.contactName}}" 
+          [(ngModel)]="contactViewModel.contactName" placeholder="Contact Name">
+        </mat-form-field>
+      </div>
+
+      
+      <div>
+        <mat-form-field style="width:300px">
+          <input [disabled]="readonlyMode" matInput name="addressLine1" value="{{contactViewModel.addressLine1}}" 
+          [(ngModel)]="contactViewModel.addressLine1" placeholder="address Line 1">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field style="width:300px">
+          <input [disabled]="readonlyMode" matInput name="addressLine2" value="{{contactViewModel.addressLine2}}" 
+          [(ngModel)]="contactViewModel.addressLine2" placeholder="address Line 2">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field style="width:300px">
+          <input [disabled]="readonlyMode" matInput name="City" value="{{contactViewModel.city}}" 
+          [(ngModel)]="contactViewModel.city" placeholder="City">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field style="width:300px">
+          <input [disabled]="readonlyMode" matInput name="Region" value="{{contactViewModel.region}}" 
+          [(ngModel)]="contactViewModel.region" placeholder="State/Region">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field style="width:300px">
+          <input [disabled]="readonlyMode" matInput name="PostalCode" value="{{contactViewModel.postalCode}}" 
+          [(ngModel)]="contactViewModel.postalCode" placeholder="Postal Code">
+        </mat-form-field>
+      </div>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button [disabled]="readonlyMode==false" mat-flat-button color="primary" >Edit Contact</button>&nbsp;
+    <button [disabled]="readonlyMode==true" mat-flat-button color="primary" (click)="createOrUpdateContact()">Save Contact</button>&nbsp;
+    <button [disabled]="createMode==true" mat-flat-button color="primary"  (click)="createNewContact()">Create New Contact</button>&nbsp;
+    <!-- <button [disabled]="createMode==true || readonlyMode==false" mat-flat-button color="primary" (click)="createSalesOrder()">Create Sales Order</button> -->
+  </mat-card-actions>
+</mat-card>

@@ -1,22 +1,22 @@
 import { TestBed } from '@angular/core/testing';
 import { ComponentFixture } from '@angular/core/testing';
-import { CustomerListComponent } from './customer-list.component';
+import { ContactListComponent } from './contact-list.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 
-describe('CustomerListComponent', () => {
+describe('ContactListComponent', () => {
 
-  let fixture: ComponentFixture<CustomerListComponent>;
-  let component: CustomerListComponent;
+  let fixture: ComponentFixture<ContactListComponent>;
+  let component: ContactListComponent;
   beforeEach(() => {
     TestBed.configureTestingModule({
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
       ],
-      declarations: [CustomerListComponent]
+      declarations: [ContactListComponent]
     });
 
-    fixture = TestBed.createComponent(CustomerListComponent);
+    fixture = TestBed.createComponent(ContactListComponent);
     component = fixture.componentInstance;
 
   });
