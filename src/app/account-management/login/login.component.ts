@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
                private alertService: AlertService, private sessionService: SessionService) {
 
     this.userViewModel = new UserViewModel();
-    this.userViewModel.emailAddress = 'deepan@verdant.co.in';
+    this.userViewModel.emailAddress = 'admin@admin.com';
     this.userViewModel.password = 'admin';
   }
 

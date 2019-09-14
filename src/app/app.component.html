@@ -53,13 +53,19 @@
 <div [hidden]="hideMenuBar || !isAuthenicated">
   <mat-toolbar color="accent">
       <div style="margin-right:20px;">
+          <a mat-list-item [routerLink]="['/customermanagement/list']">
+            <mat-icon class="icon">dashboard</mat-icon>
+            <span class="label">Customer</span>
+          </a>
+        </div>
+      <div style="margin-right:20px;">
           <a mat-list-item [routerLink]="['/contactmanagement/list']">
             <mat-icon class="icon">dashboard</mat-icon>
             <span class="label">Contacts</span>
           </a>
         </div>
 
-    <div style="margin-right:20px;">
+    <!-- <div style="margin-right:20px;">
       <a mat-list-item [routerLink]="['/inventorymanagement/product-inquiry']">
         <mat-icon class="icon">dashboard</mat-icon>
         <span class="label">Inventory Management</span>
@@ -71,7 +77,7 @@
         <mat-icon class="icon">dashboard</mat-icon>
         <span class="label">Sales Order Management</span>
       </a>
-    </div>
+    </div> -->
 
     <div style="margin-right:20px;">
       <a mat-list-item [routerLink]="['purchaseordermanagement/supplier-inquiry']">

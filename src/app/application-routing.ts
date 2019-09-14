@@ -13,5 +13,9 @@ export const ApplicationRoutes: Routes = [
         path: 'contactmanagement', loadChildren:
             '../app/contact/contact-management.module#ContactManagementModule'
     },
+    {
+        path: 'customermanagement', loadChildren:
+            '../app/customer/customer-management.module#CustomerManagementModule'
+    },
 ];
 

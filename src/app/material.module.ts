@@ -16,6 +16,10 @@ import {
   MatTableModule,
   MatPaginatorModule,
   MatDialogModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatTabsModule,
+  MatGridListModule,
 } from '@angular/material';
 
 import { MatSortModule } from '@angular/material/sort';
@@ -47,6 +51,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatMenuModule,
     MatProgressSpinnerModule,
     MatDialogModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatGridListModule,
     // MatFileUploadModule
   ],
   exports: [
@@ -71,8 +79,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatMenuModule,
     MatProgressSpinnerModule,
     MatDialogModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatGridListModule,
     // MatFileUploadModule
   ]
 })
 export class MaterialModule {}
-
