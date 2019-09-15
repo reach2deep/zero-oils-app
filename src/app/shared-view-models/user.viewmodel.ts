@@ -1,3 +1,5 @@
+import { Capability } from 'protractor';
+
 export class UserViewModel {
     public userId: number;
     public firstName: string;
@@ -9,5 +11,6 @@ export class UserViewModel {
     public token: string;
     public tokenExpirationDate: Date;
     public isAuthenicated: Boolean;
-
 }
+
+

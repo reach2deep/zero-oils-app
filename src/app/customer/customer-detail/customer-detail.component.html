@@ -71,7 +71,7 @@
                 <div class="field_form">
                 <div class="contact_box">
                 <mat-form-field>
-                  <input matInput placeholder="customer@dds.com">
+                  <input name="EmailAddress" value="{{CustomerViewModel.email}}" matInput [(ngModel)]="CustomerViewModel.email" placeholder="customer@dds.com">
                 </mat-form-field>
               </div>
               </div>
