@@ -1,11 +1,21 @@
-<mat-card>
-  <mat-card-header>
+<section class="inner_box">
+  <!-- <mat-card-header>
     <mat-card-title>
       <h2>Register</h2>
     </mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-
+  <mat-card-content> -->
+      <div class="header-wrapper overlay header-md">
+          <header class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <h1>Register</h1>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="login_box">
+            <div class="container align_top">
     <form>
 
       <div>
@@ -46,8 +56,10 @@
 
 
     </form>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-flat-button color="primary" (click)="register()">Register</button>
-  </mat-card-actions>
-</mat-card>
+    </div>
+    </div>
+
+    <div class="button-container">
+    <button class="button" type="button" (click)="register()"> <span>Register</span> </button>
+    </div>
+</section>

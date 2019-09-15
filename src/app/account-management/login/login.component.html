@@ -1,33 +1,46 @@
-<section>
+<section class="inner_box">
   
-<mat-card>
-    <mat-card-header>
+    <div class="header-wrapper overlay header-md">
+        <header class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <h1>Login</h1>
+            </div>
+          </div>
+        </header>
+      </div>
+    <!-- <mat-card-header>
       <mat-card-title>
         <h2>Login</h2>
       </mat-card-title>
     </mat-card-header>
-    <mat-card-content>
+    <mat-card-content> -->
   
-      <form>
+      <div class="login_box">
+        <div class="container align_top">
+            <form>
   
-        <div>
-          <mat-form-field >
-            <input matInput type="email" name="EmailAddress" value="{{userViewModel.emailAddress}}" [(ngModel)]="userViewModel.emailAddress" placeholder="Email Address">
-          </mat-form-field>
-        </div>
-  
-        <div>
-          <mat-form-field>
-            <input matInput  type="password"  name="Password" placeholder="Password" value="{{userViewModel.password}}" [(ngModel)]="userViewModel.password">
-          </mat-form-field>
-        </div>
-  
-      </form>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-flat-button color="primary" (click)="login()">Login</button>
-    </mat-card-actions>
-  </mat-card>
+                <div>
+                  <mat-form-field >
+                    <input matInput type="email" name="EmailAddress" value="{{userViewModel.emailAddress}}" [(ngModel)]="userViewModel.emailAddress" placeholder="Email Address">
+                  </mat-form-field>
+                </div>
+          
+                <div>
+                  <mat-form-field>
+                    <input matInput  type="password"  name="Password" placeholder="Password" value="{{userViewModel.password}}" [(ngModel)]="userViewModel.password">
+                  </mat-form-field>
+                </div>
+          
+              </form>
+        
+              <div class="button-container">
+              <button class="button" type="button" (click)="login()">  <span>Login</span> </button>
+              </div>
+          </div>
+      </div> 
+      
+ 
 
 </section>
 

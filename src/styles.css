@@ -184,6 +184,15 @@ h1 {
   text-align: center;
   margin: 0 0 2em;
 }
+.login_box .container {
+  max-width: 19rem;
+  padding: 3rem 5rem 3rem;
+}
+
+.login_box .container.align_top {
+  margin: -3rem auto;
+
+}
 
 .container {
   position: relative;
@@ -191,8 +200,8 @@ h1 {
   margin: 5rem auto;
   background: #fff;
   width: 100%;
-  padding: 3rem 5rem 0;
-  border-radius: 1px;
+  padding: 3rem 5rem 3rem;
+  border-radius: 5px;
 }
 .container::before {
   content: '';
@@ -536,7 +545,8 @@ fieldset {
   border: 1px solid currentColor;
   font-size: 1.1rem;
   color: #4f93ce;
-  margin: 3rem 0;
+  /* margin: 3rem 0; */
+  margin-top: 2rem;
   padding: 0.75rem 3rem;
   cursor: pointer;
   -webkit-transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
@@ -623,6 +633,7 @@ fieldset {
 }
 .inner_box {
   background: #fafafa;
+  min-height: 100vh;
 }
 .mat-form-field {
   font-family:  'Josefin Sans', sans-serif;
