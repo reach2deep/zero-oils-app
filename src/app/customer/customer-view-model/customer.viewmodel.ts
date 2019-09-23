@@ -9,10 +9,12 @@ export class CustomerViewModel {
     public firstName: string;
     public lastName: string;
     public displayName: string;
-    public companyName: Date;
+    public companyName: string;
     public email: string;
     public workPhone: string;
     public mobileNumber: string;
     public websiteAddress: string;
+    
 
 }
+

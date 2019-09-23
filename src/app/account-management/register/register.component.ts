@@ -47,11 +47,12 @@ export class RegisterComponent implements OnInit {
   public register() {
     let user = new UserViewModel();
     user = this.userViewModel;
-
-    let url = this.sessionService.appSettings.accountManagementWebApiUrl +  'authorization/register';
-    this.httpService.HttpPost<UserViewModelResponse>(url, user).subscribe((response: UserViewModelResponse) => {
-      this.registerSuccess(response);
-    }, response => this.registerFailed(response));
+    console.log('On register click');
+    console.log(JSON.stringify(user));
+    // let url = this.sessionService.appSettings.accountManagementWebApiUrl +  'authorization/register';
+    // this.httpService.HttpPost<UserViewModelResponse>(url, user).subscribe((response: UserViewModelResponse) => {
+    //   this.registerSuccess(response);
+    // }, response => this.registerFailed(response));
 
   }
 

@@ -13,17 +13,31 @@ import { SessionService } from 'src/app/shared-component/session.service';
 })
 
 export class CustomerDetailComponent implements OnInit {
-  public CustomerViewModel: CustomerViewModel;
-
+  public customerViewModel: CustomerViewModel;
   constructor(private router: Router, private httpService: HttpService, private sessionService: SessionService) {
 
-this.CustomerViewModel = new CustomerViewModel();
-this.CustomerViewModel.email = '';
+  this.customerViewModel = new CustomerViewModel();
+  this.customerViewModel.email = '';
+  this.customerViewModel.firstName = '';
+  this.customerViewModel.lastName = '';
+  this.customerViewModel.displayName = '';
+  this.customerViewModel.companyName = '';
+  this.customerViewModel.workPhone = '';
+  this.customerViewModel.mobileNumber = '';
+  this.customerViewModel.websiteAddress = '';
 
 }
 
 
   ngOnInit() {
-
   }
+
+  public customer() {
+
+    let user = new CustomerViewModel();
+    user = this.customerViewModel;
+    console.log('On register click');
+    console.log(JSON.stringify(user));
+
+}
 }

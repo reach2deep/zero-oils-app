@@ -51,77 +51,76 @@
                             <mat-option value="option">Mr</mat-option>
                             <mat-option value="option">Mrs</mat-option>
                           </mat-select>
-
                       </mat-form-field>
                     </div>
                   <div class="contact_box">
                       <mat-form-field>
-                        <input matInput placeholder="Customer 1">
+                        <input matInput name="firstName" value="{{customerViewModel.firstName}}"  [(ngModel)]="customerViewModel.firstName"   placeholder="firstName">
                       </mat-form-field>
                     </div>
                     <div class="contact_box">
                         <mat-form-field>
-                          <input matInput placeholder="Last Name">
+                          <input matInput name="lastName" value="{{customerViewModel.lastName}}"  [(ngModel)]="customerViewModel.lastName"  placeholder="Last Name">
                         </mat-form-field>
                       </div>
               </div>
             </div>
             <div class="form-group">
+              <label class="form_name">company name</label>
+              <div class="field_form">
+              <div class="contact_box">
+              <mat-form-field>
+                <input matInput  name="companyName" value="{{customerViewModel.companyName}}"  [(ngModel)]="customerViewModel.companyName" placeholder="Company Name">
+              </mat-form-field>
+            </div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="form_name">contact display name</label>
+              <div class="field_form">
+                  <div class="contact_box">
+                    <mat-form-field>
+                      <mat-select placeholder="Customer 1">
+                        <mat-option value="option">Mr.Customer1</mat-option>
+                        <mat-option value="option">Mr.Customer2</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                    </div>
+              </div>
+            </div>
+
+            <div class="form-group">
                 <label class="form_name">contact email</label>
                 <div class="field_form">
                 <div class="contact_box">
                 <mat-form-field>
-                  <input name="EmailAddress" value="{{CustomerViewModel.email}}" matInput [(ngModel)]="CustomerViewModel.email" placeholder="customer@dds.com">
+                  <input matInput name="EmailAddress" value="{{customerViewModel.email}}"  [(ngModel)]="customerViewModel.email" placeholder="customer@dds.com">
                 </mat-form-field>
               </div>
               </div>
               </div>
 
-              <div class="form-group">
-                  <label class="form_name">contact display name</label>
-                  <div class="field_form">
-                      <div class="contact_box">
-                        <mat-form-field>
-                          <mat-select placeholder="Customer 1">
-                            <mat-option value="option">Mr.Customer1</mat-option>
-                            <mat-option value="option">Mr.Customer2</mat-option>
-                          </mat-select>
-                        </mat-form-field>
-                        </div>
-                  </div>
-                </div>
-
-              <div class="form-group">
-                  <label class="form_name">contact display name</label>
-                  <div class="field_form">
-                  <div class="contact_box">
-                      <mat-form-field>
-                          <input matInput placeholder="Mr.Customer1">
-                        </mat-form-field>
-                </div>
-              </div>
-                </div>
                 <div class="form-group">
                     <label class="form_name">Contact Phone</label>
                     <div class="field_form">
                         <div class="contact_box">
                             <mat-form-field>
-                              <input matInput placeholder="Work Phone">
+                              <input matInput name="workPhone" value="{{customerViewModel.workPhone}}"  [(ngModel)]="customerViewModel.workPhone"  placeholder="Work Phone">
                             </mat-form-field>
                           </div>
                         <div class="contact_box">
                             <mat-form-field>
-                              <input matInput placeholder="Mobile">
+                              <input matInput name="mobileNumber" value="{{customerViewModel.mobileNumber}}"  [(ngModel)]="customerViewModel.mobileNumber"  placeholder="Mobile">
                             </mat-form-field>
                           </div>
                     </div>
-                  </div>
+                  </div> 
                   <div class="form-group">
                       <label class="form_name">Website</label>
-                      <div class="field_form">
+                      <div class="field_form"> 
                           <div class="contact_box">
                               <mat-form-field>
-                                <input matInput placeholder="Work Phone">
+                                <input matInput name="websiteAddress" value="{{customerViewModel.websiteAddress}}"  [(ngModel)]="customerViewModel.websiteAddress"  placeholder="Zero.com">
                               </mat-form-field>
                             </div>
                       </div>
@@ -339,7 +338,7 @@
               </mat-tab-group>
 
           <div class="button-container">
-            <button type="button" class="button"><span>Submit</span></button>
+            <button type="button" class="button" (click)="customer()"><span>Submit</span></button>
           </div>
         </div>
 
