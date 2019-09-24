@@ -21,10 +21,13 @@
                   <label class="form_name">contact type</label>
                   <div class="field_form">
                       <div class="contact_box">
-                          <mat-radio-group>
+                          <!-- <mat-radio-group>
                               <mat-radio-button value="m"> Customer </mat-radio-button>
                               <mat-radio-button value="f"> Vendor </mat-radio-button>
-                            </mat-radio-group>
+                            </mat-radio-group> -->
+                            <mat-radio-group name="opList"  fxLayout="column" [(ngModel)]="customerViewModel.contactId">
+                              <mat-radio-button *ngFor="let op of list" [value]="customerViewModel.contactId" name="opList" >{{ op.name}}</mat-radio-button>
+                          </mat-radio-group>
                         </div>
 
                   </div>
@@ -45,13 +48,19 @@
               <label class="form_name">primary contact</label>
               <div class="field_form">
                   <div class="contact_box">
-                      <mat-form-field>
+                      <!-- <mat-form-field>
                           <mat-label>Mr</mat-label>
                           <mat-select placeholder="Mr">
                             <mat-option value="option">Mr</mat-option>
                             <mat-option value="option">Mrs</mat-option>
                           </mat-select>
+                        </mat-form-field> -->
+                      <mat-form-field>
+                        <mat-select [(ngModel)]="customerViewModel.salutation">
+                          <mat-option name="Name" *ngFor="let gender of genderList" [value]="customerViewModel.salutation">{{ gender }}</mat-option>
+                        </mat-select>
                       </mat-form-field>
+                      
                     </div>
                   <div class="contact_box">
                       <mat-form-field>
@@ -79,10 +88,15 @@
               <label class="form_name">contact display name</label>
               <div class="field_form">
                   <div class="contact_box">
-                    <mat-form-field>
+                    <!-- <mat-form-field>
                       <mat-select placeholder="Customer 1">
                         <mat-option value="option">Mr.Customer1</mat-option>
                         <mat-option value="option">Mr.Customer2</mat-option>
+                      </mat-select>
+                    </mat-form-field> -->
+                    <mat-form-field>
+                      <mat-select [(ngModel)]="customerViewModel.customerType">
+                        <mat-option name="Name" *ngFor="let gender of CustomerList" [value]="customerViewModel.customerType">{{ gender }}</mat-option>
                       </mat-select>
                     </mat-form-field>
                     </div>

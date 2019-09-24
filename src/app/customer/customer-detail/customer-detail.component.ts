@@ -13,26 +13,42 @@ import { SessionService } from 'src/app/shared-component/session.service';
 })
 
 export class CustomerDetailComponent implements OnInit {
+
+
   public customerViewModel: CustomerViewModel;
   constructor(private router: Router, private httpService: HttpService, private sessionService: SessionService) {
 
   this.customerViewModel = new CustomerViewModel();
+  
+  this.customerViewModel.contactId = '';
   this.customerViewModel.email = '';
   this.customerViewModel.firstName = '';
   this.customerViewModel.lastName = '';
   this.customerViewModel.displayName = '';
   this.customerViewModel.companyName = '';
+  this.customerViewModel.salutation = '';
+  this.customerViewModel.customerType = '';
   this.customerViewModel.workPhone = '';
   this.customerViewModel.mobileNumber = '';
   this.customerViewModel.websiteAddress = '';
 
-}
 
+}
+list = [
+  { "name": "some name 1", ID: "D1"},
+  { "name": "some name 2", ID: "D2"}
+]
+
+genderList = ['Male', 'Female']
+
+CustomerList = ['Male', 'Female']
 
   ngOnInit() {
   }
 
   public customer() {
+
+
 
     let user = new CustomerViewModel();
     user = this.customerViewModel;
