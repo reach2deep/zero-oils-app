@@ -19,8 +19,6 @@ export class CustomerDetailComponent implements OnInit {
   constructor(private router: Router, private httpService: HttpService, private sessionService: SessionService) {
 
   this.customerViewModel = new CustomerViewModel();
-  
-  this.customerViewModel.contactId = '';
   this.customerViewModel.email = '';
   this.customerViewModel.firstName = '';
   this.customerViewModel.lastName = '';
@@ -34,10 +32,7 @@ export class CustomerDetailComponent implements OnInit {
 
 
 }
-list = [
-  { "name": "some name 1", ID: "D1"},
-  { "name": "some name 2", ID: "D2"}
-]
+
 
 genderList = ['Male', 'Female']
 
